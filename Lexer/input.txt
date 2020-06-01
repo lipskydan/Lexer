@@ -1,0 +1,18 @@
+#include <iostream.h>
+#include <vector.h>
+
+int main(){
+int a = 5;
+int b = 2.3;
+string str = "qwerty";
+
+
+if(a && b){
+cout<<"QWERTY";
+}
+else
+{
+cin>>a;
+}
+
+
