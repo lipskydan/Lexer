@@ -10,13 +10,29 @@ public enum Token {
     LIBR_VEC("<vector.h>"),
     LIBR("<" + "\\w+" + ".h" + ">"),
 
+    KEYWORD_ALIGNAS("alignas"),
+    KEYWORD_ALIGNOF("alignof"),
+    KEYWORD_AND("and"),
+    KEYWORD_AND_EQ("and_eq"),
+    KEYWORD_ASM("asm"),
+    KEYWORD_AUTO("auto"),
+    KEYWORD_BITAND("bitand"),
+    KEYWORD_BITOR("bitor"),
+    KEYWORD_DEFAULT("default"),
+    KEYWORD_USING("using"),
+    KEYWORD_NAMESPACE("namespace " + "\\w+"),
+    KEYWORD_NEW("new"),
+    KEYWORD_RETURN("return"),
+
+
     FUNC_VOID("void" + " " + "\\w+" + "\\(" + "\\)"),
     FUNC_MAIN("\\w+" + " " + "main" + "\\(" + "\\)"),
-    FUNC("\\w+" + " " + "\\w+" + "\\(" + "\\)"),
+    FUNC_WITH_IDENTIFIER("\\w+" + " " + "\\w+" + "\\(" + "\\)"),
 
 
     CYCLE_FOR("for" + "\\(" + "\\w+" + " " + "\\w+" + "\\W+" + "\\d+" + ";" + "\\w+" + "\\W+" + "\\d+" + ";" + "\\w+" + "\\++" + "\\)"),
-    CYCLE_WHILE("while" + "\\(" + "\\w+" + "\\W+" + "\\d+" + "\\)"),
+    CYCLE_WHILE_1("while" + "\\(" + "\\w+" + "\\W+" + "\\d+" + "\\)"),
+    CYCLE_WHILE_2("while" + "\\(" + "\\w+" + "\\W+" + "'" + "\\w+" + "'" + "\\|" + "\\|" + "\\w+" + "\\W+" + "'" + "\\w+" + "'" + "\\)"),
 
     TYPE_DOUBLE("double"),
     TYPE_INTEGER("int"),
@@ -33,15 +49,21 @@ public enum Token {
     INTEGER("\\d+"),
 
     STRING("\"[^\"]+\""),
+    COMMENTS("/" + "/" + " " + "\"[^\"]+\""),
 
-    TK_CLASS("class " + "\\w+"),
+    TK_CLASS_WITH_IDENTIFIER("class " + "\\w+"),
 
     TK_OUTPUT("cout<<"),
     TK_INPUT("cin>>"),
+    TK_ENDL("endl"),
 
     TK_KEY_IF("if" + "\\(" + "\\w+" + "\\W+" + "\\w+" + "\\)"),
     TK_KEY_ELSE("else"),
     TK_KEY_THEN("then"),
+
+    TK_SWITCH("switch " + "\\(" + "\\w+" + "\\)"),
+    TK_CASE("case" + "\\'" + "\\W+" + "\\'" + ":"),
+    TK_BREAK("break" + ";"),
 
     VARIABLE("\\w+"),
 
@@ -63,36 +85,6 @@ public enum Token {
     TK_POINT(".");
 
 ////////////////////////////////////////////
-
-
-//    TK_AND("&"),
-//
-
-//    TK_CLOSE("\\)"),
-//
-
-
-//
-
-//    TK_KEY_AS("as"),
-//    TK_KEY_DEFINE("define"),
-
-//    TK_KEY_ENDIF("endif"),
-//
-//
-
-//
-
-//
-
-//
-//    TK_NOT("~"),
-//
-//    TK_OPEN("\\("),
-//    //TK_OR("\\|"),
-
-
-
 
 
     private final Pattern pattern;

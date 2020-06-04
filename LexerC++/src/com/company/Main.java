@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Lexer lexer = new Lexer("/home/danial/git_environment/Lexer/Lexer/input.txt");
+        Lexer lexer = new Lexer("/Users/danial/Documents/GitHub/Lexer/LexerC++/src/input.txt");
 
         System.out.println("Lexical Analysis");
         System.out.println("-----------------");
