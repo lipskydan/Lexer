@@ -18,10 +18,6 @@ public enum Token {
     CYCLE_FOR("for" + "\\(" + "\\w+" + " " + "\\w+" + "\\W+" + "\\d+" + ";" + "\\w+" + "\\W+" + "\\d+" + ";" + "\\w+" + "\\++" + "\\)"),
     CYCLE_WHILE("while" + "\\(" + "\\w+" + "\\W+" + "\\d+" + "\\)"),
 
-
-
-
-
     TYPE_DOUBLE("double"),
     TYPE_INTEGER("int"),
     TYPE_STRING("string"),
@@ -38,6 +34,8 @@ public enum Token {
 
     STRING("\"[^\"]+\""),
 
+    TK_CLASS("class " + "\\w+"),
+
     TK_OUTPUT("cout<<"),
     TK_INPUT("cin>>"),
 
@@ -46,8 +44,6 @@ public enum Token {
     TK_KEY_THEN("then"),
 
     VARIABLE("\\w+"),
-
-
 
     TK_EQ("=="),
     TK_GEQ(">="),

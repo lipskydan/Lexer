@@ -1,6 +1,11 @@
 #include <iostream.h>
 #include <vector.h>
 
+class A{
+int a;
+int A;
+}
+
 int main(){
 int a = 5;
 int b = 2.3;
